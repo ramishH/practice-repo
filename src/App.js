@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{useEffect,useState,Component,PureComponent} from 'react';
+import {useDispatch,useSelector} from 'react-redux'
+import {moivesList} from './Actions'
+import Home from './Components/Home/Home'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App=()=>{
+  // const reduxState=useSelector(reduxState=>reduxState)
+  // const dispatch=useDispatch()
+  // const [init,setInit]=useState(false)
+
+  // useEffect(()=>{
+  //   if(!init){
+  //     dispatch(moivesList())
+  //     setInit(true)
+  //   }
+  // },[init])
+
+  return(
+    <div>
+        <Home/>     
     </div>
-  );
+  )
 }
 
-export default App;
+
+
+export default App
